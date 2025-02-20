@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/models/User.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/models/Student.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/web/index.html</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/dao/StudentDAO.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/servlets/IssueBookServlet.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/web/addStudent.jsp</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/web/style.css</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/web/login.html</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/servlets/SearchServlet.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/servlets/ViewBooksServlet.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/models/Book.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/servlets/AddBookServlet.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/utils/DBConnection.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/dao/BookDAO.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/servlets/LogoutServlet.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/servlets/ViewStudentsServlet.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/servlets/LoginServlet.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/dao/UserDAO.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/web/register.jsp</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/servlets/RegisterServlet.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/web/viewStudents.jsp</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/web/searchBook.jsp</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/web/returnBook.jsp</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/web/student.jsp</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/web/addBook.jsp</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/web/admin.jsp</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/web/viewBooks.jsp</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/servlets/ReturnBookServlet.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/web/issueBook.jsp</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/servlets/AddStudentServlet.java</file>
+            <file>file:/C:/Users/H/OneDrive/Documents/NetBeansProjects/Library/src/java/com/library/utils/CreateTables.java</file>
+        </group>
+    </open-files>
+</project-private>
