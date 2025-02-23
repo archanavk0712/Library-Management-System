@@ -11,7 +11,24 @@ import java.util.List;
 
 public class StudentDAO {
 
-    // Method to add a new student
+    // ✅ Method to check if student exists by Student ID or Email
+    public boolean studentExists(String studentId, String email) {
+        String query = "SELECT COUNT(*) FROM students WHERE student_id = ? OR email = ?";
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setString(1, studentId);
+            stmt.setString(2, email);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1) > 0; // If count > 0, student exists
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    // ✅ Existing method to add a student
     public boolean addStudent(Student student) {
         String query = "INSERT INTO students (student_id, name, email, book, author) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = DBConnection.getConnection();
@@ -26,14 +43,15 @@ public class StudentDAO {
             return rowsInserted > 0;
         } catch (SQLException e) {
             e.printStackTrace();
-            return false;
         }
+        return false;
     }
-
-    // Method to retrieve all students
+    
+      // ✅ Method to get all students
     public List<Student> getAllStudents() {
         List<Student> students = new ArrayList<>();
-        String query = "SELECT * FROM students";
+        String query = "SELECT student_id, name, email, book, author FROM students";
+
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query);
              ResultSet rs = stmt.executeQuery()) {
@@ -43,8 +61,8 @@ public class StudentDAO {
                     rs.getString("student_id"),
                     rs.getString("name"),
                     rs.getString("email"),
-                    rs.getString("book"),   // Added field
-                    rs.getString("author")  // Added field
+                    rs.getString("book"),
+                    rs.getString("author")
                 );
                 students.add(student);
             }
@@ -53,61 +71,5 @@ public class StudentDAO {
         }
         return students;
     }
-
-    // Method to get a student by ID
-    public Student getStudentById(String studentId) {
-        String query = "SELECT * FROM students WHERE student_id = ?";
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(query)) {
-            stmt.setString(1, studentId);
-            try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    return new Student(
-                        rs.getString("student_id"),
-                        rs.getString("name"),
-                        rs.getString("email"),
-                        rs.getString("book"),   // Added field
-                        rs.getString("author")  // Added field
-                    );
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    // Method to update student details
-    public boolean updateStudent(Student student) {
-        String query = "UPDATE students SET name = ?, email = ?, book = ?, author = ? WHERE student_id = ?";
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(query)) {
-            stmt.setString(1, student.getName());
-            stmt.setString(2, student.getEmail());
-            stmt.setString(3, student.getBook());
-            stmt.setString(4, student.getAuthor());
-            stmt.setString(5, student.getStudentId());
-
-            int rowsUpdated = stmt.executeUpdate();
-            return rowsUpdated > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
-
-    // Method to delete a student by ID
-    public boolean deleteStudent(String studentId) {
-        String query = "DELETE FROM students WHERE student_id = ?";
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(query)) {
-            stmt.setString(1, studentId);
-
-            int rowsDeleted = stmt.executeUpdate();
-            return rowsDeleted > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
 }
+
